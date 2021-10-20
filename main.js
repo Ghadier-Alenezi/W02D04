@@ -17,6 +17,11 @@ addButton.id = "addButton";
 addButton.textContent = "Add";
 body.append(addButton);
 
+const updateButton = document.createElement("button");
+updateButton.id = "updateButton";
+updateButton.textContent = "Update";
+body.append(addButton);
+
 const toDos = ["wake up", "eat breakfast", "code"];
 
 const renderList = () => {
@@ -26,11 +31,17 @@ const renderList = () => {
     itemsList.innerHTML = toDos[i];
     UlList.append(itemsList);
 
-    //delbutton
+    //del button
     const button = document.createElement("button");
     button.id = "button";
     button.innerHTML = "Delete";
     UlList.append(button);
+
+    //update button
+    const updateButton = document.createElement("button");
+    updateButton.id = "updateButton";
+    updateButton.textContent = "Update";
+    UlList.append(updateButton);
   }
 };
 renderList();
@@ -46,14 +57,22 @@ addButton.addEventListener(
   })
 );
 
-/*
 // add delete function
+//when click dele button > li deleted
+
 button.addEventListener(
   "click",
   (deleteListItem = () => {
-    //when click dele button > li deleted
     toDos.splice(i, 1);
     renderList(addToList);
   })
 );
-*/
+
+// add update function
+
+updateButton.addEventListener(
+  "click",
+  (updateListItem = ()=> {
+    
+  })
+  );
