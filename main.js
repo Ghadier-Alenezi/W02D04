@@ -25,7 +25,10 @@ const renderList = () => {
     const itemsList = document.createElement("li");
     itemsList.innerHTML = toDos[i];
     UlList.append(itemsList);
+
+    //delbutton
     const button = document.createElement("button");
+    button.id = "button";
     button.innerHTML = "Delete";
     UlList.append(button);
   }
@@ -42,7 +45,15 @@ addButton.addEventListener(
     }
   })
 );
+
+/*
 // add delete function
-const deleteListItem = () => {
-  
-}
+button.addEventListener(
+  "click",
+  (deleteListItem = () => {
+    //when click dele button > li deleted
+    toDos.splice(i, 1);
+    renderList(addToList);
+  })
+);
+*/
